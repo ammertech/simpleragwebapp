@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAG Chat mit Azure AI Foundry</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>RAG Chat mit Azure AI Foundry</h1>
+            <p>Stelle Fragen zu deinen Dokumenten</p>
+        </header>
+
+        <main>
+            <div class="chat-container">
+                <div id="chat-messages" class="chat-messages">
+                    <div class="message system">
+                        <div class="message-content">
+                            <p>Willkommen! Ich kann dir Fragen zu deinen Dokumenten beantworten. Was möchtest du wissen?</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="chat-input">
+                    <form id="query-form">
+                        <input type="text" id="query-input" placeholder="Stelle eine Frage..." required>
+                        <button type="submit">Fragen</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="sources-container">
+                <h2>Quellen</h2>
+                <div id="sources-list" class="sources-list">
+                    <p class="no-sources">Noch keine Quellen vorhanden.</p>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>RAG Chat App mit Azure AI Foundry, Azure OpenAI und Azure AI Search</p>
+        </footer>
+    </div>
+
+    <div id="loading-indicator" class="loading-indicator">
+        <div class="spinner"></div>
+    </div>
+
+    <script src="/static/js/script.js"></script>
+</body>
+</html>
